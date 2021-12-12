@@ -23,6 +23,9 @@ export const Navbar = () => {
 				<Link className="items" to={`/vehicles`}>
 					Vehicles
 				</Link>
+				<Link className="items" to={`/user`}>
+					Users
+				</Link>
 			</div>
 			<Favorites />
 		</nav>

@@ -15,7 +15,7 @@ import Planets from "./views/planets";
 import Vehicles from "./views/vehicles";
 import DetallePlanets from "./views/detallePlanets";
 import DetalleVehicles from "./views/detalleVehicles";
-import { Navbar_2 } from "./component/navbar_2";
+import User from "./views/User";
 
 //create your first component
 const Layout = () => {
@@ -39,6 +39,9 @@ const Layout = () => {
 					</Route>
 					<Route exact path="/vehicles">
 						<Vehicles />
+					</Route>
+					<Route exact path="/user">
+						<User />
 					</Route>
 					<Route exact path="/detalle/:id">
 						<Detalle />
