@@ -12,13 +12,16 @@ const Planets = () => {
 				{store.planetas.map((el, index) => {
 					return (
 						<div className="card_character_item" key={index}>
-							<img src={require(`../../img/planetas/${el.uid}-planeta.jpg`)} />
+							<img src={el.img} />
 							<h5>{el.name}</h5>
 							<div className="card_icons">
-								<Link className="card_botton" to={`/detallePlanets/${el.uid}`}>
+								<Link className="card_botton" to={`/detallePlanets/${el.id}`}>
 									Ver Detalle
 								</Link>
-								<span>
+								<span
+									onClick={() => {
+										actions.agregarFavoritosPlanetas(el.id);
+									}}>
 									<i className="far fa-heart" />
 								</span>
 							</div>

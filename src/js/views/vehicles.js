@@ -18,7 +18,10 @@ const Vehicles = () => {
 								<Link className="card_botton" to={`/detalleVehicles/${el.uid}`}>
 									Ver Detalle
 								</Link>
-								<span>
+								<span
+									onClick={() => {
+										actions.agregarFavoritosVehiculos(index);
+									}}>
 									<i className="far fa-heart" />
 								</span>
 							</div>

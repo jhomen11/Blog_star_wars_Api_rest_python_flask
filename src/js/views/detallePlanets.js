@@ -16,10 +16,9 @@ const DetallePlanets = () => {
 		<div className="container_detalle">
 			<div className="card_detalle">
 				<div className="card_item">
-					<img src={require(`../../img/planetas/${id}-planeta.jpg`)} />
+					<img src={store.detallePlaneta.img} />
 					<h4>Name: {store.detallePlaneta.name}</h4>
 					<p> Climate: {store.detallePlaneta.climate}</p>
-					<p>Orbital Period: {store.detallePlaneta.orbital_period}</p>
 					<p>Terrain: {store.detallePlaneta.terrain}</p>
 
 					<Link className="card_botton" to={"/planets"}>

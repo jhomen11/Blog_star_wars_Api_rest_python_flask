@@ -15,6 +15,7 @@ import Planets from "./views/planets";
 import Vehicles from "./views/vehicles";
 import DetallePlanets from "./views/detallePlanets";
 import DetalleVehicles from "./views/detalleVehicles";
+import { Navbar_2 } from "./component/navbar_2";
 
 //create your first component
 const Layout = () => {
@@ -25,10 +26,7 @@ const Layout = () => {
 	return (
 		<div className="main">
 			<BrowserRouter basename={basename}>
-				<div id="barra">
-					<Navbar />
-				</div>
-
+				<Navbar />
 				<Switch>
 					<Route exact path="/">
 						<Home />

@@ -11,15 +11,16 @@ const Detalle = () => {
 	useEffect(() => {
 		actions.verDetalle(id);
 	}, []);
+	console.log(store.detallePersonaje);
 
 	return (
 		<div className="container_detalle">
 			<div className="card_detalle">
 				<div className="card_item">
-					<img src={require(`../../img/${id}.jpg`)} />
+					<img src={store.detallePersonaje.img} />
 					<h4>Name: {store.detallePersonaje.name}</h4>
 					<p> Height: {store.detallePersonaje.height}</p>
-					<p>Hair Color: {store.detallePersonaje.hair_color}</p>
+					<p>Eye Color: {store.detallePersonaje.eye_color}</p>
 					<Link className="card_botton" to={"/characters"}>
 						Volver
 					</Link>
