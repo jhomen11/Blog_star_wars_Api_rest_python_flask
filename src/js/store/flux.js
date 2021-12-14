@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			users: [],
 			personajes: [],
 			planetas: [],
 			starships: [],
@@ -116,10 +117,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				await fetch(`https://3000-aquamarine-donkey-cauaghje.ws-us23.gitpod.io/planets/${id}`)
 					.then(response => response.json())
-					//.then(data => console.log(data))
 					.then(data => {
 						setStore({ detallePlaneta: data });
 					})
+					.catch(error => console.log("error", error));
+			},
+
+			obtenerApiUsers: async () => {
+				await fetch("https://3000-aquamarine-donkey-cauaghje.ws-us23.gitpod.io/user")
+					.then(response => response.json())
+					//.then(data => console.log(data))
+					.then(data => setStore({ users: data }))
 					.catch(error => console.log("error", error));
 			}
 		}

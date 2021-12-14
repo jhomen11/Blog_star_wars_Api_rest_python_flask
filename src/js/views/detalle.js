@@ -11,7 +11,6 @@ const Detalle = () => {
 	useEffect(() => {
 		actions.verDetalle(id);
 	}, []);
-	console.log(store.detallePersonaje);
 
 	return (
 		<div className="container_detalle">

@@ -26,20 +26,6 @@ const Favorites = () => {
 					})}
 				</Dropdown.Menu>
 			</Dropdown>
-			{/* <span className="favoritos_dropdown" onClick={() => actions.setMostrarFavoritos()}>
-				Favorites {store.favoritos.length}
-			</span>
-
-			<ul className={store.mostrarFavoritos ? "visible" : "oculto"}>
-				{store.favoritos.map((el, index) => {
-					return (
-						<li key={index}>
-							{el.name}
-							<i onClick={() => actions.eliminarFavoritos(index)} className="far fa-trash-alt" />
-						</li>
-					);
-				})}
-			</ul> */}
 		</div>
 	);
 };

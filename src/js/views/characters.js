@@ -5,7 +5,6 @@ import "../../styles/characters.scss";
 
 export const Characters = () => {
 	const { store, actions } = useContext(Context);
-	console.log(store.personajes);
 
 	return (
 		<div className="container_character">
